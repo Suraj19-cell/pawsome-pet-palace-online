@@ -1,61 +1,102 @@
 
+import { useState } from "react";
 import PetCard from "./PetCard";
+import { Button } from "@/components/ui/button";
 
 const FeaturedPets = () => {
-  const featuredPets = [
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  const pets = [
     {
       id: 1,
-      name: "Luna",
-      age: "2 years",
-      breed: "Tabby Cat",
-      imageUrl: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1",
-      location: "Oakland, CA"
+      name: "Buddy",
+      type: "dog",
+      breed: "Golden Retriever",
+      age: "3 years",
+      image: "/placeholder.svg",
     },
     {
       id: 2,
-      name: "Max",
-      breed: "Golden Retriever",
-      age: "3 years",
-      imageUrl: "https://images.unsplash.com/photo-1501286353178-1ec871b47838",
-      location: "San Francisco, CA"
+      name: "Whiskers",
+      type: "cat",
+      breed: "Siamese",
+      age: "2 years",
+      image: "/placeholder.svg",
     },
     {
       id: 3,
-      name: "Coco",
-      breed: "Parrot",
+      name: "Chirpy",
+      type: "bird",
+      breed: "Canary",
       age: "1 year",
-      imageUrl: "https://images.unsplash.com/photo-1441057206919-63d19fac2369",
-      location: "Berkeley, CA"
+      image: "/placeholder.svg",
+    },
+    {
+      id: 4,
+      name: "Bubbles",
+      type: "fish",
+      breed: "Goldfish",
+      age: "6 months",
+      image: "/placeholder.svg",
     },
   ];
 
+  const filteredPets = activeCategory === "all" ? pets : pets.filter(pet => pet.type === activeCategory);
+
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-slate-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-rounded font-bold text-3xl md:text-4xl mb-4">Pets Looking for a Home</h2>
+          <h2 className="font-rounded font-bold text-3xl md:text-4xl mb-4">Featured Pets</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Meet our featured pets who are currently available for adoption and looking for their forever homes
+            Meet some of our wonderful pets looking for their forever homes
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredPets.map(pet => (
+        <div className="flex justify-center flex-wrap gap-2 mb-8">
+          <Button
+            variant={activeCategory === "all" ? "default" : "outline"}
+            onClick={() => setActiveCategory("all")}
+          >
+            All Pets
+          </Button>
+          <Button
+            variant={activeCategory === "dog" ? "default" : "outline"}
+            onClick={() => setActiveCategory("dog")}
+          >
+            Dogs
+          </Button>
+          <Button
+            variant={activeCategory === "cat" ? "default" : "outline"}
+            onClick={() => setActiveCategory("cat")}
+          >
+            Cats
+          </Button>
+          <Button
+            variant={activeCategory === "bird" ? "default" : "outline"}
+            onClick={() => setActiveCategory("bird")}
+          >
+            Birds
+          </Button>
+          <Button
+            variant={activeCategory === "fish" ? "default" : "outline"}
+            onClick={() => setActiveCategory("fish")}
+          >
+            Fish
+          </Button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {filteredPets.map((pet) => (
             <PetCard
               key={pet.id}
               name={pet.name}
-              age={pet.age}
+              type={pet.type}
               breed={pet.breed}
-              imageUrl={pet.imageUrl}
-              location={pet.location}
+              age={pet.age}
+              image={pet.image}
             />
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Button className="bg-pet-blue hover:bg-pet-purple font-medium px-8 py-6 rounded-full text-lg">
-            View All Available Pets
-          </Button>
         </div>
       </div>
     </section>
