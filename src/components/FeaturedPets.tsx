@@ -14,6 +14,7 @@ const FeaturedPets = () => {
       breed: "Golden Retriever",
       age: "3 years",
       image: "/placeholder.svg",
+      location: "San Francisco, CA"
     },
     {
       id: 2,
@@ -22,6 +23,7 @@ const FeaturedPets = () => {
       breed: "Siamese",
       age: "2 years",
       image: "/placeholder.svg",
+      location: "Los Angeles, CA"
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ const FeaturedPets = () => {
       breed: "Canary",
       age: "1 year",
       image: "/placeholder.svg",
+      location: "Seattle, WA"
     },
     {
       id: 4,
@@ -38,6 +41,7 @@ const FeaturedPets = () => {
       breed: "Goldfish",
       age: "6 months",
       image: "/placeholder.svg",
+      location: "Portland, OR"
     },
   ];
 
@@ -91,10 +95,10 @@ const FeaturedPets = () => {
             <PetCard
               key={pet.id}
               name={pet.name}
-              type={pet.type}
               breed={pet.breed}
               age={pet.age}
-              image={pet.image}
+              imageUrl={pet.image}
+              location={pet.location}
             />
           ))}
         </div>
