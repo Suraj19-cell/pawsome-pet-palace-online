@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Pet theme colors
+                pet: {
+                    blue: '#6B9AC4',
+                    orange: '#F9A03F',
+                    green: '#8CBF84',
+                    purple: '#9B87F5',
+                    lightBlue: '#D3E4FD',
+                    lightOrange: '#FDE1D3',
+                    lightGreen: '#F2FCE2',
+                    lightPurple: '#E5DEFF',
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +96,25 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'bounce-slight': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' }
+                },
+                'wiggle': {
+                    '0%, 100%': { transform: 'rotate(-3deg)' },
+                    '50%': { transform: 'rotate(3deg)' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'bounce-slight': 'bounce-slight 2s ease-in-out infinite',
+                'wiggle': 'wiggle 1s ease-in-out infinite'
+			},
+            fontFamily: {
+                'rounded': ['Nunito', 'sans-serif'],
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
