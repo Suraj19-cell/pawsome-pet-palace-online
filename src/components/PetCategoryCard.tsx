@@ -7,9 +7,10 @@ type PetCategoryProps = {
   title: string;
   count: number;
   className?: string;
+  imageUrl?: string;
 };
 
-const PetCategoryCard = ({ type, title, count, className }: PetCategoryProps) => {
+const PetCategoryCard = ({ type, title, count, className, imageUrl }: PetCategoryProps) => {
   const getIcon = () => {
     switch (type) {
       case "cat":
@@ -41,10 +42,17 @@ const PetCategoryCard = ({ type, title, count, className }: PetCategoryProps) =>
   };
 
   return (
-    <div className={cn("rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer", getColor(), className)}>
-      <div className="mb-4">{getIcon()}</div>
-      <h3 className="font-rounded font-bold text-xl mb-1">{title}</h3>
-      <p className="text-sm opacity-80">{count} available</p>
+    <div className={cn("rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer", className)}>
+      <div className="relative h-48 w-full">
+        {imageUrl ? (
+          <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
+        ) : null}
+        <div className={cn("absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex flex-col justify-end p-6", getColor())}>
+          <div className="mb-2">{getIcon()}</div>
+          <h3 className="font-rounded font-bold text-xl mb-1 text-white">{title}</h3>
+          <p className="text-sm text-white/80">{count} available</p>
+        </div>
+      </div>
     </div>
   );
 };

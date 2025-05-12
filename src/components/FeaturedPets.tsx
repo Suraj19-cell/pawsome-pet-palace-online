@@ -13,7 +13,7 @@ const FeaturedPets = () => {
       type: "dog",
       breed: "Golden Retriever",
       age: "3 years",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=762&q=80",
       location: "San Francisco, CA"
     },
     {
@@ -22,7 +22,7 @@ const FeaturedPets = () => {
       type: "cat",
       breed: "Siamese",
       age: "2 years",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1015&q=80",
       location: "Los Angeles, CA"
     },
     {
@@ -31,7 +31,7 @@ const FeaturedPets = () => {
       type: "bird",
       breed: "Canary",
       age: "1 year",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1444464666168-49d633b86797?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80",
       location: "Seattle, WA"
     },
     {
@@ -40,8 +40,44 @@ const FeaturedPets = () => {
       type: "fish",
       breed: "Goldfish",
       age: "6 months",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
       location: "Portland, OR"
+    },
+    {
+      id: 5,
+      name: "Rex",
+      type: "dog",
+      breed: "German Shepherd",
+      age: "4 years",
+      image: "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+      location: "New York, NY"
+    },
+    {
+      id: 6,
+      name: "Mittens",
+      type: "cat",
+      breed: "Tabby",
+      age: "1 year",
+      image: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+      location: "Chicago, IL"
+    },
+    {
+      id: 7,
+      name: "Tweety",
+      type: "bird",
+      breed: "Parakeet",
+      age: "8 months",
+      image: "https://images.unsplash.com/photo-1593610596149-2273da5c0762?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+      location: "Denver, CO"
+    },
+    {
+      id: 8,
+      name: "Nemo",
+      type: "fish",
+      breed: "Clownfish",
+      age: "1 year",
+      image: "https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      location: "Miami, FL"
     },
   ];
 
