@@ -4,25 +4,25 @@ import PetCategoryCard from "./PetCategoryCard";
 const PetCategories = () => {
   const categories = [
     {
-      type: "cat",
+      type: "cat" as const,
       title: "Cats",
       count: 42,
       image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1143&q=80"
     },
     {
-      type: "dog",
+      type: "dog" as const,
       title: "Dogs",
       count: 56,
       image: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
     },
     {
-      type: "bird",
+      type: "bird" as const,
       title: "Birds",
       count: 24,
       image: "https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
     },
     {
-      type: "fish",
+      type: "fish" as const,
       title: "Fish",
       count: 36,
       image: "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=873&q=80"
