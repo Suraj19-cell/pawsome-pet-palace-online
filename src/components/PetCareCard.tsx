@@ -1,6 +1,7 @@
 
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 type PetCareCardProps = {
   title: string;
@@ -21,9 +22,11 @@ const PetCareCard = ({ title, description, imageUrl, className, price, category 
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         {category && (
-          <Badge className="absolute top-3 right-3 bg-white/80 text-black hover:bg-white/90">
-            {category}
-          </Badge>
+          <Link to={`/products/${category.toLowerCase()}`}>
+            <Badge className="absolute top-3 right-3 bg-white/80 text-black hover:bg-white/90">
+              {category}
+            </Badge>
+          </Link>
         )}
       </div>
       <div className="p-4 bg-white">
@@ -35,8 +38,8 @@ const PetCareCard = ({ title, description, imageUrl, className, price, category 
         </div>
         <p className="text-gray-600 text-sm mt-2">{description}</p>
         <div className="mt-4 flex justify-between items-center">
-          <a
-            href="#"
+          <Link
+            to={`/products/${category?.toLowerCase() || ''}`}
             className="inline-flex items-center text-pet-purple font-medium text-sm hover:text-pet-blue transition-colors"
           >
             View Details
@@ -54,7 +57,7 @@ const PetCareCard = ({ title, description, imageUrl, className, price, category 
                 d="M9 5l7 7-7 7"
               />
             </svg>
-          </a>
+          </Link>
           <button className="bg-pet-purple text-white px-3 py-1 rounded-full text-xs font-medium hover:bg-pet-blue transition-colors">
             Add to Cart
           </button>

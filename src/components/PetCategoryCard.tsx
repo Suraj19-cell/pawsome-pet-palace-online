@@ -1,6 +1,7 @@
 
 import { Cat, Dog, Bird, Fish } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 type PetCategoryProps = {
   type: "cat" | "dog" | "bird" | "fish";
@@ -42,7 +43,7 @@ const PetCategoryCard = ({ type, title, count, className, imageUrl }: PetCategor
   };
 
   return (
-    <div className={cn("rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer", className)}>
+    <Link to={`/products/${type}`} className={cn("rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer block", className)}>
       <div className="relative h-48 w-full">
         {imageUrl ? (
           <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
@@ -53,7 +54,7 @@ const PetCategoryCard = ({ type, title, count, className, imageUrl }: PetCategor
           <p className="text-sm text-white/80">{count} available</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
