@@ -172,10 +172,7 @@ const PetDetails = () => {
   }
   
   const handleAdoptClick = () => {
-    toast({
-      title: "Adoption Started",
-      description: `You've begun the adoption process for ${pet.name}. Our team will contact you soon!`,
-    });
+    toast(`You've begun the adoption process for ${pet!.name}. Our team will contact you soon!`);
   };
 
   // Generate stars based on rating
