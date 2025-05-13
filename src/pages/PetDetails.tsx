@@ -1,11 +1,10 @@
-
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Heart, Award, Star, StarHalf } from "lucide-react";
-import { useToast } from "@/components/ui/toast";
+import { toast } from "@/components/ui/sonner";
 
 // Import this from a central location in a real app
 const pets = [
@@ -149,7 +148,6 @@ const typeAdvantages = {
 
 const PetDetails = () => {
   const { id } = useParams<{ id: string }>();
-  const { toast } = useToast();
   const [isFavorite, setIsFavorite] = useState(false);
   
   // Find the pet with the matching id
