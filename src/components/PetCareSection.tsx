@@ -18,6 +18,7 @@ const PetCareSection = () => {
           {petProducts.map(product => (
             <PetCareCard
               key={product.id}
+              id={product.id}
               title={product.title}
               description={product.description}
               imageUrl={product.imageUrl}
