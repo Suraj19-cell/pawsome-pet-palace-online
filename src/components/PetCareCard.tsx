@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import { useCart } from "@/context/CartContext";
 
 type PetCareCardProps = {
   title: string;
@@ -10,9 +11,24 @@ type PetCareCardProps = {
   className?: string;
   price?: number;
   category?: string;
+  id: number;
 };
 
-const PetCareCard = ({ title, description, imageUrl, className, price, category }: PetCareCardProps) => {
+const PetCareCard = ({ id, title, description, imageUrl, className, price, category }: PetCareCardProps) => {
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    if (price) {
+      addToCart({
+        id,
+        title,
+        price,
+        imageUrl,
+        category: category || "uncategorized"
+      });
+    }
+  };
+
   return (
     <div className={cn("group overflow-hidden rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1", className)}>
       <div className="relative h-48 overflow-hidden">
@@ -58,7 +74,10 @@ const PetCareCard = ({ title, description, imageUrl, className, price, category 
               />
             </svg>
           </Link>
-          <button className="bg-pet-purple text-white px-3 py-1 rounded-full text-xs font-medium hover:bg-pet-blue transition-colors">
+          <button 
+            className="bg-pet-purple text-white px-3 py-1 rounded-full text-xs font-medium hover:bg-pet-blue transition-colors"
+            onClick={handleAddToCart}
+          >
             Add to Cart
           </button>
         </div>

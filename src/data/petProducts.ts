@@ -2,50 +2,74 @@
 export const petProducts = [
   {
     id: 1,
-    title: "Premium Puppy Food",
-    description: "High-quality nutrition for growing puppies with added vitamins and minerals.",
+    title: "Premium Dog Food",
+    description: "Nutrient-rich dog food for all breeds",
     price: 24.99,
-    category: "Food",
-    imageUrl: "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+    category: "Food"
   },
   {
     id: 2,
-    title: "Catnip Mouse Toys (3-Pack)",
-    description: "Interactive toys filled with organic catnip to keep your cat entertained for hours.",
-    price: 12.99,
-    category: "Toys",
-    imageUrl: "https://images.unsplash.com/photo-1526336179256-1347bdb255ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    title: "Cat Scratching Post",
+    description: "Durable scratching post with suspended toy",
+    price: 39.99,
+    imageUrl: "https://images.unsplash.com/photo-1545249390-6bdfa286032f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2344&q=80",
+    category: "Toys"
   },
   {
     id: 3,
-    title: "Bird Cage Swing Set",
-    description: "Colorful wooden swings and perches for small to medium-sized pet birds.",
-    price: 9.99,
-    category: "Accessories",
-    imageUrl: "https://images.unsplash.com/photo-1544464116-32a2c8dbe8c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    title: "Bird Cage Stand",
+    description: "Elegant stand for bird cages with storage",
+    price: 89.99,
+    imageUrl: "https://images.unsplash.com/photo-1539275889301-9610c5630c04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2535&q=80",
+    category: "Accessories"
   },
   {
     id: 4,
-    title: "Aquarium Plant Decorations",
-    description: "Lifelike artificial plants that create a natural habitat for your fish.",
-    price: 14.99,
-    category: "Decor",
-    imageUrl: "https://images.unsplash.com/photo-1584553421349-3557471bed79?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    title: "Fish Tank Filter",
+    description: "High-efficiency filter for aquariums",
+    price: 32.99,
+    imageUrl: "https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+    category: "Equipment"
   },
   {
     id: 5,
-    title: "Dog Dental Chew Treats",
-    description: "Tasty treats that help clean teeth and freshen breath while providing entertainment.",
-    price: 8.99,
-    category: "Treats",
-    imageUrl: "https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    title: "Dog Chew Toys",
+    description: "Set of durable chew toys for dogs",
+    price: 18.99,
+    imageUrl: "https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+    category: "Toys"
   },
   {
     id: 6,
-    title: "Cat Scratching Post",
-    description: "Durable sisal post with plush top perch to satisfy natural scratching instincts.",
-    price: 29.99,
-    category: "Furniture",
-    imageUrl: "https://images.unsplash.com/photo-1571566882372-1598d88abd90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    title: "Cat Premium Food",
+    description: "Grain-free premium cat food",
+    price: 22.99,
+    imageUrl: "https://images.unsplash.com/photo-1600180583258-6d9b0c7b782b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+    category: "Food"
   },
+  {
+    id: 7,
+    title: "Pet Carrier Backpack",
+    description: "Comfortable carrier backpack for small pets",
+    price: 49.99,
+    imageUrl: "https://images.unsplash.com/photo-1601758066053-3bdc0915c9a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+    category: "Accessories"
+  },
+  {
+    id: 8,
+    title: "Bird Seeds Mix",
+    description: "Premium quality bird seeds mix",
+    price: 15.99,
+    imageUrl: "https://images.unsplash.com/photo-1566484158154-e239e6381866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+    category: "Food"
+  },
+  {
+    id: 9,
+    title: "Fish Food Flakes",
+    description: "Nutritious flakes for all tropical fish",
+    price: 12.99,
+    imageUrl: "https://images.unsplash.com/photo-1520990059581-890f678e240f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2346&q=80",
+    category: "Food"
+  }
 ];
