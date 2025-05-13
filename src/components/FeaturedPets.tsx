@@ -83,13 +83,22 @@ const FeaturedPets = () => {
 
   const filteredPets = activeCategory === "all" ? pets : pets.filter(pet => pet.type === activeCategory);
 
+  // Category descriptions
+  const categoryDescriptions = {
+    all: "Meet our wonderful companions looking for their forever homes",
+    dog: "Loyal, playful, and protective friends for active families",
+    cat: "Independent, affectionate companions perfect for any home",
+    bird: "Colorful, musical friends that bring joy to your space",
+    fish: "Peaceful, low-maintenance pets for a tranquil environment"
+  };
+
   return (
     <section className="py-16 bg-slate-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-rounded font-bold text-3xl md:text-4xl mb-4">Featured Pets</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Meet some of our wonderful pets looking for their forever homes
+            {categoryDescriptions[activeCategory as keyof typeof categoryDescriptions]}
           </p>
         </div>
 
@@ -135,6 +144,7 @@ const FeaturedPets = () => {
               age={pet.age}
               imageUrl={pet.image}
               location={pet.location}
+              type={pet.type}
             />
           ))}
         </div>

@@ -7,6 +7,14 @@ import { petProducts } from "@/data/petProducts";
 const AllProducts = () => {
   // Get unique categories
   const uniqueCategories = [...new Set(petProducts.map(product => product.category))];
+  
+  // Category specialty descriptions
+  const categoryDescriptions = {
+    "Food": "Nutritionally balanced diets for optimal pet health",
+    "Toys": "Engaging toys to keep your pets active and entertained",
+    "Accessories": "Essential items to enhance your pet's comfort",
+    "Equipment": "High-quality equipment for proper pet care"
+  };
 
   return (
     <div className="min-h-screen flex flex-col font-rounded">
@@ -25,7 +33,13 @@ const AllProducts = () => {
 
             {uniqueCategories.map(category => (
               <div key={category} className="mb-16">
-                <h3 className="text-2xl font-bold mb-6 border-b pb-2">{category}</h3>
+                <div className="border-b pb-2 mb-6">
+                  <h3 className="text-2xl font-bold">{category}</h3>
+                  <p className="text-pet-green text-sm mt-1">
+                    {categoryDescriptions[category as keyof typeof categoryDescriptions] || 
+                    "Quality products for your beloved pets"}
+                  </p>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {petProducts
                     .filter(product => product.category === category)

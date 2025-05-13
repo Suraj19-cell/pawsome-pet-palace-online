@@ -9,10 +9,27 @@ type PetCardProps = {
   breed: string;
   imageUrl: string;
   location: string;
+  type: string;
 };
 
-const PetCard = ({ name, age, breed, imageUrl, location }: PetCardProps) => {
+const PetCard = ({ name, age, breed, imageUrl, location, type }: PetCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
+
+  // Pet specialty content based on type
+  const getSpecialtyContent = (petType: string) => {
+    switch (petType) {
+      case "dog":
+        return "Loyal companion, great for active families";
+      case "cat":
+        return "Independent, perfect for busy households";
+      case "bird":
+        return "Cheerful, brings melody to your home";
+      case "fish":
+        return "Calming presence, low maintenance";
+      default:
+        return "Wonderful pet looking for a forever home";
+    }
+  };
 
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
@@ -31,6 +48,9 @@ const PetCard = ({ name, age, breed, imageUrl, location }: PetCardProps) => {
             className={isFavorite ? "fill-pet-orange text-pet-orange" : "text-gray-400"}
           />
         </button>
+        <div className="absolute bottom-0 left-0 bg-pet-blue text-white px-3 py-1 text-sm font-medium">
+          {type.charAt(0).toUpperCase() + type.slice(1)}
+        </div>
       </div>
       <div className="p-5">
         <div className="flex justify-between items-start mb-2">
@@ -39,7 +59,8 @@ const PetCard = ({ name, age, breed, imageUrl, location }: PetCardProps) => {
             {age}
           </span>
         </div>
-        <p className="text-gray-600 text-sm mb-3">{breed}</p>
+        <p className="text-gray-600 text-sm mb-2">{breed}</p>
+        <p className="text-pet-green text-sm italic mb-3">{getSpecialtyContent(type)}</p>
         <div className="flex items-center text-gray-500 text-sm mb-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
