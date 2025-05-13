@@ -2,6 +2,7 @@
 import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type PetCardProps = {
   name: string;
@@ -10,9 +11,10 @@ type PetCardProps = {
   imageUrl: string;
   location: string;
   type: string;
+  id?: number; // Adding optional id for linking to details page
 };
 
-const PetCard = ({ name, age, breed, imageUrl, location, type }: PetCardProps) => {
+const PetCard = ({ name, age, breed, imageUrl, location, type, id }: PetCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   // Pet specialty content based on type
@@ -84,7 +86,9 @@ const PetCard = ({ name, age, breed, imageUrl, location, type }: PetCardProps) =
           </svg>
           {location}
         </div>
-        <Button className="w-full bg-pet-purple hover:bg-pet-blue">Meet {name}</Button>
+        <Link to={`/pet/${id || 1}`}>
+          <Button className="w-full bg-pet-purple hover:bg-pet-blue">Meet {name}</Button>
+        </Link>
       </div>
     </div>
   );

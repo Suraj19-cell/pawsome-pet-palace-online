@@ -139,6 +139,7 @@ const FeaturedPets = () => {
           {filteredPets.map((pet) => (
             <PetCard
               key={pet.id}
+              id={pet.id}
               name={pet.name}
               breed={pet.breed}
               age={pet.age}

@@ -12,6 +12,7 @@ import AllProducts from "./pages/AllProducts";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import PaymentSuccess from "./pages/PaymentSuccess";
+import PetDetails from "./pages/PetDetails";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/products/all" element={<AllProducts />} />
               <Route path="/products/:category" element={<ProductCategory />} />
+              <Route path="/pet/:id" element={<PetDetails />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/payment-success" element={<PaymentSuccess />} />
