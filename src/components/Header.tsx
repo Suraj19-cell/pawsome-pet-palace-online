@@ -11,7 +11,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +42,7 @@ const Header = () => {
   return (
     <header
       className={`sticky top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-pet-purple shadow-md py-3" : "bg-pet-purple bg-opacity-90 py-5"
+        isScrolled ? "bg-pet-teal shadow-md py-3" : "bg-pet-teal bg-opacity-90 py-5"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -136,7 +135,7 @@ const Header = () => {
         
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-pet-purple mt-4 rounded-md p-4 shadow-lg">
+          <div className="md:hidden bg-pet-teal mt-4 rounded-md p-4 shadow-lg">
             <nav>
               <ul className="flex flex-col space-y-4">
                 <li>

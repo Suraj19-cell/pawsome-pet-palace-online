@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,8 +62,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-                // Pet theme colors
+                // Updated Pet theme colors with a new color palette
                 pet: {
+                    teal: '#3CAEA3',
+                    coral: '#F46036',
+                    sand: '#F8C15C',
+                    navy: '#2E5266',
+                    mint: '#8BD7D2',
+                    lightTeal: '#D5F5F2',
+                    lightCoral: '#FFDBD1',
+                    lightSand: '#FFF0D6',
+                    lightNavy: '#D9E5EB',
+                    // Keep existing colors for backward compatibility
                     blue: '#6B9AC4',
                     orange: '#F9A03F',
                     green: '#8CBF84',
