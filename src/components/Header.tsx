@@ -36,10 +36,14 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header
       className={`sticky top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-pet-purple shadow-md py-3" : "bg-transparent py-5"
+        isScrolled ? "bg-pet-purple shadow-md py-3" : "bg-pet-purple bg-opacity-90 py-5"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -60,7 +64,7 @@ const Header = () => {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">Products</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[200px] gap-2 p-4">
+                    <ul className="grid w-[200px] gap-2 p-4 bg-white">
                       <li>
                         <NavigationMenuLink asChild>
                           <Link 
@@ -105,7 +109,9 @@ const Header = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <CartIcon />
+                  <Link to="/cart" className="text-white hover:text-white/80 transition-colors px-4 py-2">
+                    Cart
+                  </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -137,7 +143,7 @@ const Header = () => {
                   <Link 
                     to="/" 
                     className="text-white hover:text-white/80 block w-full py-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={closeMobileMenu}
                   >
                     Home
                   </Link>
@@ -146,7 +152,7 @@ const Header = () => {
                   <Link 
                     to="/products/all" 
                     className="text-white hover:text-white/80 block w-full py-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={closeMobileMenu}
                   >
                     All Products
                   </Link>
@@ -155,7 +161,7 @@ const Header = () => {
                   <Link 
                     to="/products/dogs" 
                     className="text-white hover:text-white/80 block w-full py-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={closeMobileMenu}
                   >
                     Dogs
                   </Link>
@@ -164,7 +170,7 @@ const Header = () => {
                   <Link 
                     to="/products/cats" 
                     className="text-white hover:text-white/80 block w-full py-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={closeMobileMenu}
                   >
                     Cats
                   </Link>
@@ -173,7 +179,7 @@ const Header = () => {
                   <Link 
                     to="/products/birds" 
                     className="text-white hover:text-white/80 block w-full py-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={closeMobileMenu}
                   >
                     Birds
                   </Link>

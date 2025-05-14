@@ -3,6 +3,7 @@ import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 type PetCardProps = {
   name: string;
@@ -16,6 +17,7 @@ type PetCardProps = {
 
 const PetCard = ({ name, age, breed, imageUrl, location, type, id }: PetCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   // Pet specialty content based on type
   const getSpecialtyContent = (petType: string) => {
@@ -33,14 +35,37 @@ const PetCard = ({ name, age, breed, imageUrl, location, type, id }: PetCardProp
     }
   };
 
+  // Default fallback images based on pet type
+  const getFallbackImage = (petType: string) => {
+    switch (petType) {
+      case "dog":
+        return "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+      case "cat":
+        return "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+      case "bird":
+        return "https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+      case "fish":
+        return "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+      default:
+        return "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+    }
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
       <div className="relative h-48 overflow-hidden">
-        <img
-          src={imageUrl}
-          alt={`${name}, a ${breed}`}
-          className="w-full h-full object-cover"
-        />
+        <AspectRatio ratio={4/3} className="bg-muted">
+          <img
+            src={imageError ? getFallbackImage(type) : imageUrl}
+            alt={`${name}, a ${breed}`}
+            className="w-full h-full object-cover"
+            onError={handleImageError}
+          />
+        </AspectRatio>
         <button
           onClick={() => setIsFavorite(!isFavorite)}
           className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md"
