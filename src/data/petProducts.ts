@@ -29,7 +29,7 @@ export const petProducts = [
     title: "Fish Tank Filter",
     description: "High-efficiency filter for aquariums",
     price: 32.99,
-    imageUrl: "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1612096536102-930957644853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     category: "Equipment"
   },
   {
@@ -45,7 +45,7 @@ export const petProducts = [
     title: "Cat Premium Food",
     description: "Grain-free premium cat food",
     price: 22.99,
-    imageUrl: "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1600626333341-33ed4e38b8da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     category: "Food"
   },
   {
@@ -69,10 +69,10 @@ export const petProducts = [
     title: "Fish Food Flakes",
     description: "Nutritious flakes for all tropical fish",
     price: 12.99,
-    imageUrl: "https://images.unsplash.com/photo-1584553421349-3557471bed79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1587302108837-dc8aa74eb71d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     category: "Food"
   },
-  // Adding additional products
+  // Adding additional products with unique images
   {
     id: 10,
     title: "Dog Harness",
@@ -94,7 +94,7 @@ export const petProducts = [
     title: "Bird Vitamin Supplement",
     description: "Essential vitamin drops for optimal bird health",
     price: 14.99,
-    imageUrl: "https://images.unsplash.com/photo-1611071536360-9dbc55e35807?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1553531889-56cc480ac5cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     category: "Food"
   },
   {
@@ -102,7 +102,7 @@ export const petProducts = [
     title: "Aquarium Plants",
     description: "Live aquatic plants for natural aquarium environment",
     price: 19.99,
-    imageUrl: "https://images.unsplash.com/photo-1628626126093-97c2c464ca5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1522094522800-6e0779f8fb1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     category: "Accessories"
   },
   {
@@ -110,7 +110,7 @@ export const petProducts = [
     title: "Dog Training Clicker",
     description: "Professional training clicker with wrist strap",
     price: 7.99,
-    imageUrl: "https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     category: "Equipment"
   },
   {
@@ -118,7 +118,7 @@ export const petProducts = [
     title: "Cat Interactive Toy",
     description: "Electronic mouse toy that mimics real movement",
     price: 24.99,
-    imageUrl: "https://images.unsplash.com/photo-1615853044434-6fd88ffcde8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1610041518868-f9241d9db17e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     category: "Toys"
   },
   {
@@ -126,7 +126,7 @@ export const petProducts = [
     title: "Fish Tank Heater",
     description: "Submersible aquarium heater with temperature control",
     price: 19.99,
-    imageUrl: "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1560982631-a2014e0e15ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     category: "Equipment"
   }
 ];
