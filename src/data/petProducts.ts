@@ -72,7 +72,6 @@ export const petProducts = [
     imageUrl: "https://images.unsplash.com/photo-1587302108837-dc8aa74eb71d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     category: "Food"
   },
-  // Adding additional products with unique images
   {
     id: 10,
     title: "Dog Harness",
@@ -128,5 +127,69 @@ export const petProducts = [
     price: 19.99,
     imageUrl: "https://images.unsplash.com/photo-1560982631-a2014e0e15ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     category: "Equipment"
+  },
+  {
+    id: 17,
+    title: "Reptile Heat Lamp",
+    description: "Adjustable heat lamp for reptile terrariums",
+    price: 34.99,
+    imageUrl: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    category: "Equipment"
+  },
+  {
+    id: 18,
+    title: "Rabbit Hutch",
+    description: "Spacious outdoor rabbit hutch with run area",
+    price: 149.99,
+    imageUrl: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    category: "Accessories"
+  },
+  {
+    id: 19,
+    title: "Hamster Exercise Ball",
+    description: "Transparent exercise ball for small pets",
+    price: 9.99,
+    imageUrl: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    category: "Toys"
+  },
+  {
+    id: 20,
+    title: "Bird Bath Fountain",
+    description: "Solar-powered bird bath with circulating water",
+    price: 45.99,
+    imageUrl: "https://images.unsplash.com/photo-1591909225276-9a6d928ce2df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    category: "Accessories"
+  },
+  {
+    id: 21,
+    title: "Dog Dental Treats",
+    description: "Dental care chews for fresh breath and clean teeth",
+    price: 16.99,
+    imageUrl: "https://images.unsplash.com/photo-1563786785330-2ad8162ef53c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    category: "Food"
+  },
+  {
+    id: 22,
+    title: "Cat Water Fountain",
+    description: "Flowing water fountain for cats with filter system",
+    price: 39.99,
+    imageUrl: "https://images.unsplash.com/photo-1603314585442-ee3b3c16fbcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    category: "Equipment"
+  },
+  {
+    id: 23,
+    title: "Parrot Perch Stand",
+    description: "Multi-level wooden perch with toys for parrots",
+    price: 59.99,
+    imageUrl: "https://images.unsplash.com/photo-1618142990632-1afee7842838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    category: "Accessories"
+  },
+  {
+    id: 24,
+    title: "Aquarium Background",
+    description: "Double-sided aquarium background with realistic scenes",
+    price: 14.99,
+    imageUrl: "https://images.unsplash.com/photo-1534575180408-b7d7c0136ee8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+    category: "Accessories"
   }
 ];

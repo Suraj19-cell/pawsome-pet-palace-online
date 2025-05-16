@@ -32,7 +32,7 @@ const PetCareCard = ({ id, title, description, imageUrl, className, price, categ
     }
   };
 
-  // Default fallback images based on category
+  // Default fallback images based on category - improved selection
   const getFallbackImage = (category?: string) => {
     switch (category?.toLowerCase()) {
       case "food":
@@ -49,6 +49,7 @@ const PetCareCard = ({ id, title, description, imageUrl, className, price, categ
   };
 
   const handleImageError = () => {
+    console.log(`Image failed to load for product: ${title}`);
     setImageError(true);
   };
 
