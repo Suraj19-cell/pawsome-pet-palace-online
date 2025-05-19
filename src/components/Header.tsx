@@ -39,6 +39,20 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Function to handle smooth scrolling to category sections
+  const scrollToCategory = (category: string) => {
+    // Close the mobile menu if it's open
+    closeMobileMenu();
+    
+    // Use timeout to ensure navigation completes before scrolling
+    setTimeout(() => {
+      const element = document.getElementById(category);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
   return (
     <header
       className={`sticky top-0 w-full z-50 transition-all duration-300 ${
@@ -77,8 +91,9 @@ const Header = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link 
-                            to="/products/dogs" 
+                            to="/products/all#dogs" 
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            onClick={() => scrollToCategory('dogs')}
                           >
                             Dogs
                           </Link>
@@ -87,8 +102,9 @@ const Header = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link 
-                            to="/products/cats" 
+                            to="/products/all#cats" 
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            onClick={() => scrollToCategory('cats')}
                           >
                             Cats
                           </Link>
@@ -97,8 +113,9 @@ const Header = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link 
-                            to="/products/birds" 
+                            to="/products/all#birds" 
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            onClick={() => scrollToCategory('birds')}
                           >
                             Birds
                           </Link>
@@ -158,27 +175,27 @@ const Header = () => {
                 </li>
                 <li>
                   <Link 
-                    to="/products/dogs" 
+                    to="/products/all#dogs" 
                     className="text-white hover:text-white/80 block w-full py-2"
-                    onClick={closeMobileMenu}
+                    onClick={() => scrollToCategory('dogs')}
                   >
                     Dogs
                   </Link>
                 </li>
                 <li>
                   <Link 
-                    to="/products/cats" 
+                    to="/products/all#cats" 
                     className="text-white hover:text-white/80 block w-full py-2"
-                    onClick={closeMobileMenu}
+                    onClick={() => scrollToCategory('cats')}
                   >
                     Cats
                   </Link>
                 </li>
                 <li>
                   <Link 
-                    to="/products/birds" 
+                    to="/products/all#birds" 
                     className="text-white hover:text-white/80 block w-full py-2"
-                    onClick={closeMobileMenu}
+                    onClick={() => scrollToCategory('birds')}
                   >
                     Birds
                   </Link>
