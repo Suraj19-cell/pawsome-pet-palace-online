@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import CartIcon from "./CartIcon";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Scissors } from "lucide-react";
 import { 
   NavigationMenu,
   NavigationMenuContent,
@@ -125,6 +125,15 @@ const Header = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
+                  <Link 
+                    to="/grooming" 
+                    className="text-white hover:text-white/80 transition-colors px-4 py-2 flex items-center gap-1.5"
+                  >
+                    <Scissors className="h-4 w-4" />
+                    Grooming
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
                   <Link to="/cart" className="text-white hover:text-white/80 transition-colors px-4 py-2">
                     Cart
                   </Link>
@@ -198,6 +207,25 @@ const Header = () => {
                     onClick={() => scrollToCategory('birds')}
                   >
                     Birds
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/grooming" 
+                    className="text-white hover:text-white/80 flex items-center gap-1.5 w-full py-2"
+                    onClick={closeMobileMenu}
+                  >
+                    <Scissors className="h-4 w-4" />
+                    Grooming
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/cart" 
+                    className="text-white hover:text-white/80 block w-full py-2"
+                    onClick={closeMobileMenu}
+                  >
+                    Cart
                   </Link>
                 </li>
               </ul>
