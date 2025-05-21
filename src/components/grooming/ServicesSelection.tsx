@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Scissors, Bath, Cut, Paw } from "lucide-react";
+import { Scissors, Bath, Shower, PawPrint } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { cn } from "@/lib/utils";
 
@@ -16,14 +16,14 @@ const groomingServices: GroomingService[] = [
   {
     id: "bath",
     name: "Bath & Brush",
-    icon: <Bath className="h-5 w-5" />,
+    icon: <Shower className="h-5 w-5" />,
     description: "Full bath with shampoo, conditioner, and thorough brushing",
     price: 35
   },
   {
     id: "haircut",
     name: "Haircut",
-    icon: <Cut className="h-5 w-5" />,
+    icon: <Scissors className="h-5 w-5" />,
     description: "Professional styling and trimming to your specifications",
     price: 45
   },
@@ -37,14 +37,14 @@ const groomingServices: GroomingService[] = [
   {
     id: "teeth",
     name: "Teeth Brushing",
-    icon: <Bath className="h-5 w-5" />,
+    icon: <Shower className="h-5 w-5" />,
     description: "Dental hygiene care for your pet's teeth",
     price: 25
   },
   {
     id: "ears",
     name: "Ear Cleaning",
-    icon: <Paw className="h-5 w-5" />,
+    icon: <PawPrint className="h-5 w-5" />,
     description: "Gentle cleaning of ears and ear canal",
     price: 20
   },
