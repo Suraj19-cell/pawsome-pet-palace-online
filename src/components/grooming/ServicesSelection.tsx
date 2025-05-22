@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Scissors, PawPrint, Droplets } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
