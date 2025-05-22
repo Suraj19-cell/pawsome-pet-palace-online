@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import CartIcon from "./CartIcon";
-import { Menu, X, Scissors } from "lucide-react";
+import { Menu, X, Scissors, Info, ListChecks } from "lucide-react";
 import { 
   NavigationMenu,
   NavigationMenuContent,
@@ -126,11 +126,37 @@ const Header = () => {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link 
+                    to="/services" 
+                    className="text-white hover:text-white/80 transition-colors px-4 py-2 flex items-center gap-1.5"
+                  >
+                    <ListChecks className="h-4 w-4" />
+                    Services
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link 
                     to="/grooming" 
                     className="text-white hover:text-white/80 transition-colors px-4 py-2 flex items-center gap-1.5"
                   >
                     <Scissors className="h-4 w-4" />
                     Grooming
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link 
+                    to="/testimonials" 
+                    className="text-white hover:text-white/80 transition-colors px-4 py-2"
+                  >
+                    Testimonials
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link 
+                    to="/about-us" 
+                    className="text-white hover:text-white/80 transition-colors px-4 py-2 flex items-center gap-1.5"
+                  >
+                    <Info className="h-4 w-4" />
+                    About Us
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
@@ -211,12 +237,41 @@ const Header = () => {
                 </li>
                 <li>
                   <Link 
+                    to="/services" 
+                    className="text-white hover:text-white/80 flex items-center gap-1.5 w-full py-2"
+                    onClick={closeMobileMenu}
+                  >
+                    <ListChecks className="h-4 w-4" />
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link 
                     to="/grooming" 
                     className="text-white hover:text-white/80 flex items-center gap-1.5 w-full py-2"
                     onClick={closeMobileMenu}
                   >
                     <Scissors className="h-4 w-4" />
                     Grooming
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/testimonials" 
+                    className="text-white hover:text-white/80 block w-full py-2"
+                    onClick={closeMobileMenu}
+                  >
+                    Testimonials
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/about-us" 
+                    className="text-white hover:text-white/80 flex items-center gap-1.5 w-full py-2"
+                    onClick={closeMobileMenu}
+                  >
+                    <Info className="h-4 w-4" />
+                    About Us
                   </Link>
                 </li>
                 <li>
