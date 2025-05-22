@@ -35,23 +35,24 @@ const PetCard = ({ name, age, breed, imageUrl, location, type, id }: PetCardProp
     }
   };
 
-  // Default fallback images based on pet type
+  // Updated fallback images with more reliable sources
   const getFallbackImage = (petType: string) => {
     switch (petType) {
       case "dog":
-        return "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+        return "https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=800";
       case "cat":
-        return "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+        return "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=800";
       case "bird":
-        return "https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+        return "https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?auto=compress&cs=tinysrgb&w=800";
       case "fish":
-        return "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+        return "https://images.pexels.com/photos/325044/pexels-photo-325044.jpeg?auto=compress&cs=tinysrgb&w=800";
       default:
-        return "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+        return "https://images.pexels.com/photos/6685527/pexels-photo-6685527.jpeg?auto=compress&cs=tinysrgb&w=800";
     }
   };
 
   const handleImageError = () => {
+    console.log(`Image failed to load for pet: ${name}, using fallback image`);
     setImageError(true);
   };
 

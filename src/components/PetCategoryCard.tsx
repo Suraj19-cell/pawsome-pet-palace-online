@@ -3,6 +3,7 @@ import { Cat, Dog, Bird, Fish } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useState } from "react";
 
 type PetCategoryProps = {
   type: "cat" | "dog" | "bird" | "fish";
@@ -13,6 +14,8 @@ type PetCategoryProps = {
 };
 
 const PetCategoryCard = ({ type, title, count, className, imageUrl }: PetCategoryProps) => {
+  const [imageError, setImageError] = useState(false);
+
   const getIcon = () => {
     switch (type) {
       case "cat":
@@ -43,15 +46,20 @@ const PetCategoryCard = ({ type, title, count, className, imageUrl }: PetCategor
     }
   };
 
-  // Default images if none provided
+  // Updated reliable default images
   const defaultImages = {
-    cat: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    dog: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    bird: "https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    fish: "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    cat: "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=800",
+    dog: "https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=800",
+    bird: "https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?auto=compress&cs=tinysrgb&w=800",
+    fish: "https://images.pexels.com/photos/325044/pexels-photo-325044.jpeg?auto=compress&cs=tinysrgb&w=800"
   };
 
-  const imageToUse = imageUrl || defaultImages[type];
+  const imageToUse = imageError || !imageUrl ? defaultImages[type] : imageUrl;
+
+  const handleImageError = () => {
+    console.log(`Image failed to load for category: ${title}, using fallback image`);
+    setImageError(true);
+  };
 
   return (
     <Link to={`/products/${type}`} className={cn("rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer block", className)}>
@@ -61,10 +69,7 @@ const PetCategoryCard = ({ type, title, count, className, imageUrl }: PetCategor
             src={imageToUse} 
             alt={title} 
             className="w-full h-full object-cover rounded-t-xl"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = defaultImages[type];
-            }} 
+            onError={handleImageError} 
           />
         </AspectRatio>
         <div className={cn("absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex flex-col justify-end p-6", getColor())}>

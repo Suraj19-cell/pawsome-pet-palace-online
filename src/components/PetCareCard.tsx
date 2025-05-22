@@ -26,30 +26,30 @@ const PetCareCard = ({ id, title, description, imageUrl, className, price, categ
         id,
         title,
         price,
-        imageUrl,
+        imageUrl: imageError ? getFallbackImage(category) : imageUrl,
         category: category || "uncategorized"
       });
     }
   };
 
-  // Default fallback images based on category - improved selection
+  // Improved fallback images with more reliable sources
   const getFallbackImage = (category?: string) => {
     switch (category?.toLowerCase()) {
       case "food":
-        return "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+        return "https://images.pexels.com/photos/6816030/pexels-photo-6816030.jpeg?auto=compress&cs=tinysrgb&w=800";
       case "toys":
-        return "https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+        return "https://images.pexels.com/photos/6685884/pexels-photo-6685884.jpeg?auto=compress&cs=tinysrgb&w=800";
       case "accessories":
-        return "https://images.unsplash.com/photo-1601758066053-3bdc0915c9a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+        return "https://images.pexels.com/photos/6130762/pexels-photo-6130762.jpeg?auto=compress&cs=tinysrgb&w=800";
       case "equipment":
-        return "https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+        return "https://images.pexels.com/photos/5731861/pexels-photo-5731861.jpeg?auto=compress&cs=tinysrgb&w=800";
       default:
-        return "https://images.unsplash.com/photo-1601758066053-3bdc0915c9a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+        return "https://images.pexels.com/photos/6685527/pexels-photo-6685527.jpeg?auto=compress&cs=tinysrgb&w=800";
     }
   };
 
   const handleImageError = () => {
-    console.log(`Image failed to load for product: ${title}`);
+    console.log(`Image failed to load for product: ${title}, using fallback image`);
     setImageError(true);
   };
 
